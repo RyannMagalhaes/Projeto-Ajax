@@ -8,6 +8,7 @@ h1{
     color:white ;
     font-style: italic;
     font-weight: bold;
+    text-shadow: 2px 2px 8px #83407d;
 }
 
 header{
@@ -21,35 +22,51 @@ header{
 }
 
 .container{
-    width: 1100px;
+    width: 1000px;
     margin: auto;
 }
 
 .divFilme{
-    background-color: rgba(121, 121, 124, 0.445);
-    border: red 2px solid;
+    background-color: rgba(32, 36, 52, 0.671);
+    border: rgba(139, 76, 134, 0.699) 2px solid;
     border-radius: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.divFilme>img{
-    width: 350px;
+.divFilme>a>img{
+    width: 300px;
     padding: 25px;
     transition-duration: 1s;
+    display: block;
+    text-align: center;
 }
 
-.divFilme>img:hover{
-    width: 550px;
+.divFilme>a>img:hover{
+    width: 480px;
     padding: 30px;
-    transition-delay: 1s,1s;
+    transition-delay: 0.75s;
     transition-duration: 1s;
 }
 
 p{
-    color: rgb(117, 117, 117);
+    color: rgb(212, 212, 212);
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
+    padding: 15px;
 }
 
 h2{
-    color: aliceblue;
+    color: rgb(212, 212, 212);
+    font-family: 'Playfair Display SC', serif;
+}
+
+.divFilme>a{
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }

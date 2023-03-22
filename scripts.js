@@ -13,27 +13,14 @@ function request(){
 
             for(i=1;i<=10;i++){
                 var elemento = document.getElementById(`filme${i}`);
-                elemento.innerHTML = `<img src="${"https://image.tmdb.org/t/p/w500"+dados.results[i].poster_path}"><img/> 
+                elemento.innerHTML = `
+                <a href="www.themoviedb.org/movie/${dados.results[i].id}",target="_blank"><img src="${"https://image.tmdb.org/t/p/w500"+dados.results[i].poster_path}"></img></a> 
                 <h2>${dados.results[i].title}<h2>
-                <p>${dados.results[i].popularity}</p>
-                <p>${dados.results[0].release_date}</p>
-                <p>${resumo = dados.results[0].overview}</p>`;               
+                <p>Public Evaluation: ${dados.results[i].vote_average}/10</p>
+                <p>Release Date: ${dados.results[i].release_date}</p>
+                <p>Overview: ${resumo = dados.results[i].overview}</p>`;               
                 
             }
-
-            //var div = document.createElement("div");
-            //document.body.appendChild(div);
-
-            //div.setAttribute("id","teste");
-            //document.getElementById("teste").innerHTML = titulo;
-
-
-
-            //console.log(titulo);
-            //console.log(imagem);
-            //console.log(popularide);
-            //console.log(data);
-            //console.log(resumo);
         });
         
 
