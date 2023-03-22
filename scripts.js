@@ -10,11 +10,19 @@ function request(){
             var popularide = dados.results[0].popularity
             var data = dados.results[0].release_date
             var resumo = dados.results[0].overview
-            console.log(titulo);
-            console.log(imagem);
-            console.log(popularide);
-            console.log(data);
-            console.log(resumo);
+
+            var div = document.createElement("div");
+            document.body.appendChild(div);
+            div.setAttribute("id","teste");
+            document.getElementById("teste").innerHTML = titulo;
+
+
+
+            //console.log(titulo);
+            //console.log(imagem);
+            //console.log(popularide);
+            //console.log(data);
+            //console.log(resumo);
         });
         
 
