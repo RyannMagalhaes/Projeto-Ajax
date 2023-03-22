@@ -11,10 +11,21 @@ function request(){
             var data = dados.results[0].release_date
             var resumo = dados.results[0].overview
 
-            var div = document.createElement("div");
-            document.body.appendChild(div);
-            div.setAttribute("id","teste");
-            document.getElementById("teste").innerHTML = titulo;
+            for(i=1;i<=10;i++){
+                var elemento = document.getElementById(`filme${i}`);
+                elemento.innerHTML = `<img src="${"https://image.tmdb.org/t/p/w500"+dados.results[i].poster_path}"><img/> 
+                <h2>${dados.results[i].title}<h2>
+                <p>${dados.results[i].popularity}</p>
+                <p>${dados.results[0].release_date}</p>
+                <p>${resumo = dados.results[0].overview}</p>`;               
+                
+            }
+
+            //var div = document.createElement("div");
+            //document.body.appendChild(div);
+
+            //div.setAttribute("id","teste");
+            //document.getElementById("teste").innerHTML = titulo;
 
 
 
